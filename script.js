@@ -128,3 +128,22 @@ function getPrevious() {
         });
     }
 }
+
+/* new function to searcj the resent tasks */
+function search_task()
+{
+
+   let search_value = document.getElementById("SearchTasks").value.toUpperCase();
+   let tasks_lists = document.querySelectorAll(".task_list li")
+   tasks_lists.forEach(function(element)
+    {
+       if (element.innerText.toUpperCase().includes(search_value))
+       {
+        element.style.display = "";
+       }
+       else{
+        element.style.display = "none";
+       }
+    })
+   
+} 
